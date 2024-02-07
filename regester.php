@@ -18,42 +18,41 @@
     <h2>تسجيل كمزود خدمة</h2>
     <div class="form-container">
       <a href="login.html" class="login">تسجيل دخول</a>
-      <form action="add_provider.php" method="post" enctype="multipart/form-data">
+      <form action="php/add_provider.php" method="post" enctype="multipart/form-data">
 
         <div class="input-name">
           <i class="fa fa-user lock"></i>
-          <input name="name" type="text" placeholder="الاسم كامل" id="name" class="name1">
+          <input  name="name" type="text" placeholder="الاسم كامل" id="name" class="name1">
         </div>
         <div class="input-name">
           <!-- <i class="fa fa-user lock mm"></i> -->
           <i class="fa-solid fa-phone lock mm"></i>
-          <input name="phone" type="text" placeholder="رقم الهاتف" id="phone" class="name ">
+          <input  name="phone" type="text" placeholder="رقم الهاتف" id="phone" class="name ">
           <span>
             <!-- //! يتم حذف  هذا الحقل ويحل مكانة حق اخيار الصورة -->
-            <i class="fa fa-lock lock"></i>
-            <input type="password" id="password" placeholder=" كلمة المرور" id="pass" class="name ">
-            <span class="toggle-icon" onclick="togglePassword()">👁</span>
+            <input required name="picture" type="file" accept="image/*" placeholder="Choose an image" id="imageInput" class="name">
+
           </span>
         </div>
         
         <div class="input-name">
           <i class="fa fa-user lock "></i>
-          <input name="id_card" type="text" placeholder="رقم البطاقة الشخصية" id="" class="address">
+          <input required name="id_card" type="text" placeholder="رقم البطاقة الشخصية" id="" class="address">
         </div>
         <div class="input-name">
           <i class="fa fa-user lock mm"></i>
-          <input name="city" type="text" placeholder="المدينة" id="city" class="name ">
+          <input required name="city" type="text" placeholder="المدينة" id="city" class="name ">
 
           <span>
             <i class="fa fa-user lock"></i>
-            <input name="street" type="text" placeholder="الشارع" id="street" class="name">
+            <input required name="street" type="text" placeholder="الشارع" id="street" class="name">
           </span>
         </div>
 
 
         <div class="input-name">
           <label for="">تحديد فئة</label>
-          <select  name="category" id="categories" class="kind">
+          <select   name="category" id="categories" class="kind">
 
             <!-- get category from DB -->
             <?php
@@ -103,13 +102,10 @@
 
     
 
-        <div class="input-name">
-          <span>
-            <input name="picture" type="file" accept="image/*" placeholder="Choose an image" id="imageInput" class="image5">
-          </span>
+    
 
 
-        </div>
+   
 
         <div class="input-name">
           <input type="submit" value="ارسال" class="button">
