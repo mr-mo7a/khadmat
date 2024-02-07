@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="font/fonts.css" >
+    <link rel="stylesheet" href="css/login.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container">
+        
+        <div class="form-container">
+          <h2> تسجيل الدخول </h2>
+          <img src="photo/Logo.png" class="img-1" alt="">
+        <form action="">
+          
+            <div class="input-name">
+                <i class="fa fa-user lock"></i>
+                <input type="text" placeholder=" اسم المستخدم" id="" class="name1">
+              </div>
+              <div class="input-name">
+                <i class="fa fa-lock lock"></i>
+                <input type="password" id="password" placeholder=" كلمة المرور" id="" class="name1">
+                <span class="toggle-icon" onclick="togglePassword()">👁</span>
+              </div>
+              <div class="input-name">
+                <input type="submit" value="دخول" class="button">
+                <a href="regester.php" class="regester-new">تسجيل جديد</a>
+              </div>
+              
+        </form>
+        <!-- <img src="photo/550.JPG" class="img-1" alt=""> -->
+    </div>
+    </div>
+</body>
+<script>
+  function togglePassword() {
+      var passwordField = document.getElementById("password");
+      var toggleIcon = document.querySelector(".toggle-icon");
+
+      if (passwordField.type === "password") {
+          passwordField.type = "text";
+          toggleIcon.textContent = "👁️";
+      } else {
+          passwordField.type = "password";
+          toggleIcon.textContent = "👁";
+      }
+  }
+</script>
+</html>
