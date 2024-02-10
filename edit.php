@@ -7,12 +7,16 @@
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <!-- <link rel="stylesheet" href="css/edit.css"> -->
-  <link rel="stylesheet" href="css/edit.css">
+  <!-- <link rel="stylesheet" href="css/edit.css"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="font/fonts.css">
   <title>Document</title>
- 
+  <style>
+ <?php 
+   include('css/edit.css');
+ ?>
+</style>
 </head>
 
 <body>
@@ -20,7 +24,7 @@
   
     <!-- <h2>تسجيل كمزود خدمة</h2> -->
     <div class="form-container">
-      <a href="login.html" class="login">تسجيل دخول</a>
+      <!-- <a href="login.html" class="login">تسجيل دخول</a> -->
       <img  src="providers_pic/<?php echo $picture["name"]; ?>" alt="" class="imguser">
       <form action="php/add_provider.php" method="post" enctype="multipart/form-data">
 
@@ -34,7 +38,7 @@
           <input  name="phone" type="text" placeholder="رقم الهاتف" id="phone" class="name ">
           <span>
             <!-- //! يتم حذف  هذا الحقل ويحل مكانة حق اخيار الصورة -->
-            <input required name="picture" type="file" accept="image/*" placeholder="Choose an image" id="imageInput" class="name">
+            <input required name="picture" type="file" accept="image/*" placeholder="Choose an image" id="imageInput" class="pic">
 
           </span>
         </div>

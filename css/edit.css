@@ -26,6 +26,7 @@ body{
     width: 700px;
     padding: 25px ;
     margin: 10px auto 0;
+    align-items: center;
    /* border-top: 5px solid blue;
    border-bottom: 5px solid blue; */
    /* box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5); */
@@ -98,8 +99,18 @@ body{
     padding: 8px 50px 8px 0;
     border-radius: 10px;
 }
+.pic{
+    width: 45%;
+    padding: 8px 50px 8px 0;
+    border-radius: 20px;
+    
+}
 @media (max-width: 768px ){
     .name{
+        width: 90.5%;
+       margin-top: 20px;
+    }
+    .pic{
         width: 90.5%;
        margin-top: 20px;
     }
@@ -115,6 +126,9 @@ body{
 }
 @media (max-width: 450px ){
     .name{
+        width: 90.5%;
+    }
+    .pic{
         width: 90.5%;
     }
     
@@ -153,7 +167,7 @@ body{
     color: blue;
     border-left: 1px solid #cccccc;
 }
-.note, .name , .name1 , .address , 
+.note, .name , .name1 , .address ,.pic, 
 .kind ,.servises {
     border: 1px solid #8a8989;
     outline: none;
@@ -163,12 +177,12 @@ body{
     transition: all 0.30s ease-in-out;
 
 }
-.note:hover, .name:hover ,.name1:hover,
+.note:hover, .name:hover ,.name1:hover,.pic:hover,
 .address:hover , 
 .kind:hover ,.servises:hover, .image:hover {
     background-color: #e2e0e090;
 }
-.note:focus , .name:focus , .name1:focus,.image:focus,
+.note:focus , .name:focus , .name1:focus,.image:focus,.pic:focus,
 .address:focus ,.servises:focus ,.kind:focus {
     border: 1px solid blue;
 }
