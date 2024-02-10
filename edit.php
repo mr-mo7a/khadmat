@@ -25,34 +25,36 @@
     <!-- <h2>تسجيل كمزود خدمة</h2> -->
     <div class="form-container">
       <!-- <a href="login.html" class="login">تسجيل دخول</a> -->
-      <img  src="providers_pic/<?php echo $picture["name"]; ?>" alt="" class="imguser">
+      <!-- <img  src="providers_pic/<?php echo $picture["name"]; ?>" alt="" class="imguser"> -->
+      <img  src="photo/Logo.png" alt="" class="imguser">
       <form action="php/add_provider.php" method="post" enctype="multipart/form-data">
 
         <div class="input-name">
-          <i class="fa fa-user lock"></i>
+          <i class="fa fa-user lock m"></i>
           <input  name="name" type="text" placeholder="الاسم كامل" id="name" class="name1">
         </div>
         <div class="input-name">
           <!-- <i class="fa fa-user lock mm"></i> -->
-          <i class="fa-solid fa-phone lock mm"></i>
+          <i class="fa-solid fa-phone lock mm m"></i>
           <input  name="phone" type="text" placeholder="رقم الهاتف" id="phone" class="name ">
           <span>
             <!-- //! يتم حذف  هذا الحقل ويحل مكانة حق اخيار الصورة -->
+            <i class="fa-solid fa-image lock ma"></i>
             <input required name="picture" type="file" accept="image/*" placeholder="Choose an image" id="imageInput" class="pic">
 
           </span>
         </div>
         
         <div class="input-name">
-          <i class="fa fa-user lock "></i>
+          <i class="fa fa-user lock m"></i>
           <input required name="id_card" type="text" placeholder="رقم البطاقة الشخصية" id="" class="address">
         </div>
         <div class="input-name">
-          <i class="fa fa-user lock mm"></i>
+          <i class="fa fa-user lock mm m"></i>
           <input required name="city" type="text" placeholder="المدينة" id="city" class="name ">
 
           <span>
-            <i class="fa fa-user lock"></i>
+            <i class="fa fa-user lock m"></i>
             <input required name="street" type="text" placeholder="الشارع" id="street" class="name">
           </span>
         </div>
