@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="font/fonts.css">
-  <title>Document</title>
+  <title>edit</title>
   <style>
  <?php 
    include('css/edit.css');
@@ -118,7 +118,7 @@
    
 
         <div class="input-name">
-          <input type="submit" value="ارسال" class="button">
+          <input type="submit" value="تعديل" class="button">
         </div>
 
       </form>

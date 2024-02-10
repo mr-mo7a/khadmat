@@ -24,12 +24,14 @@ body{
 .container{
     /* background: #fff; */
     width: 700px;
-    padding: 25px ;
-    margin: 10px auto 0;
+    padding: 25px;
+    margin: 50px auto 0;
    /* border-top: 5px solid blue;
    border-bottom: 5px solid blue; */
-   /* box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5); */
+   box-shadow: 0 0 7px 5px rgba(148, 147, 147, 0.5);
+   
 }
+
 @media (max-width: 768px ){
     .container{
         width: 500px;
@@ -89,14 +91,41 @@ body{
 .name{
     width: 45%;
     padding: 8px 50px 8px 0;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+.pic{
+    width: 45%;
+    padding: 8px 45px 8px 0;
+    /* padding: 8px; */
+    border-radius: 20px;
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    overflow: hidden;
+    
+   
+}
+.pic::-webkit-file-upload-button{
+    display: none;
+}
+input[type="file"]{
+    background-color: #192cfa;
+   
 }
 @media (max-width: 768px ){
     .name{
         width: 90.5%;
        margin-top: 20px;
     }
+    .pic{
+        width: 90.5%;
+       margin-top: 20px;
+    }
     .mm{
+        position: absolute;
+        top: 20px;
+    }
+    .ma{
         position: absolute;
         top: 20px;
     }
@@ -110,23 +139,25 @@ body{
     .name{
         width: 90.5%;
     }
-    
+    .pic{
+        width: 90.5%;
+    }
 
 }
 .name1{
     width: 90.5%;
     padding: 8px 50px 8px 0;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .address{
     width: 90.5%;
     padding: 8px 50px 8px 0;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .note{
     width: 60%;
     padding: 8px 50px 80px 0;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .image{
     width: 30%;
@@ -140,13 +171,22 @@ body{
     -ms-transition: all 0.30s ease-in-out;
     transition: all 0.30s ease-in-out;
 }
-.input-name i{
+.input-name .m{
     position: absolute;
     font-size: 18px;
     color: blue;
     border-left: 1px solid #cccccc;
+    
 }
-.note, .name , .name1 , .address , 
+.input-name .ma{
+    position: absolute;
+    font-size: 18px;
+    color: rgb(243, 243, 249);
+    /* border-left: 1px solid #cccccc; */
+    z-index: 100;
+}
+
+.note, .name , .name1 , .address , .pic,
 .kind ,.servises {
     border: 1px solid #8a8989;
     outline: none;
@@ -161,7 +201,10 @@ body{
 .kind:hover ,.servises:hover, .image:hover {
     background-color: #e2e0e090;
 }
-.note:focus , .name:focus , .name1:focus,.image:focus,
+.pic:hover{
+    background-color: rgb(96, 7, 251);
+}
+.note:focus , .name:focus , .name1:focus,.image:focus,.pic:focus,
 .address:focus ,.servises:focus ,.kind:focus {
     border: 1px solid blue;
 }
@@ -172,7 +215,7 @@ body{
     height: 35px;
     padding: 0px 15px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .servises{
     direction: ltr;
@@ -181,7 +224,7 @@ body{
     height: 35px;
     padding: 0px 15px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 @media (max-width: 768px ){
     .kind{
@@ -223,12 +266,13 @@ body{
 .button{
     width: 90.5%;
     padding: 8px 50px 8px 0;
-    border-radius: 10px;
-    background-color: blue;
+    border-radius: 20px;
+    background-color: #1933fa;
     color: #fff;
+    border: none;
 }
 .button:hover{
-    background-color: #1982fa;
+    background-color: rgb(96, 7, 251);
 }
 .login{
    /* color: #fff; */

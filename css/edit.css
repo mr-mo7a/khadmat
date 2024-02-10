@@ -24,11 +24,12 @@ body{
 .container{
     /* background: #fff; */
     width: 700px;
-    padding: 25px ;
-    margin: 10px auto 0;
+    padding: 25px;
+    margin: 50px auto 0;
    /* border-top: 5px solid blue;
    border-bottom: 5px solid blue; */
-   /* box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5); */
+   box-shadow: 0 0 7px 5px rgba(148, 147, 147, 0.5);
+   
 }
  .imguser{
     width: 80px;
@@ -112,7 +113,7 @@ body{
    
 }
 .pic::-webkit-file-upload-button{
-    display: none;/
+    display: none;
 }
 input[type="file"]{
     background-color: #192cfa;
@@ -203,10 +204,13 @@ input[type="file"]{
     transition: all 0.30s ease-in-out;
 
 }
-.note:hover, .name:hover ,.name1:hover,.pic:hover,
+.note:hover, .name:hover ,.name1:hover,
 .address:hover , 
 .kind:hover ,.servises:hover, .image:hover {
     background-color: #e2e0e090;
+}
+.pic:hover{
+    background-color: rgb(96, 7, 251);
 }
 .note:focus , .name:focus , .name1:focus,.image:focus,.pic:focus,
 .address:focus ,.servises:focus ,.kind:focus {
@@ -270,13 +274,13 @@ input[type="file"]{
 .button{
     width: 90.5%;
     padding: 8px 50px 8px 0;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #1933fa;
     color: #fff;
     border: none;
 }
 .button:hover{
-    background-color: rgb(246, 42, 20);
+    background-color: rgb(96, 7, 251);
 }
 .login{
    /* color: #fff; */

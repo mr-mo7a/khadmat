@@ -6,11 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/regester.css">
+  <!-- <link rel="stylesheet" href="css/regester.css"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="font/fonts.css">
-  <title>Document</title>
+  <title>regester</title>
+
+  <style>
+ <?php 
+   include('css/regester.css');
+ ?>
+</style>
 </head>
 
 <body>
@@ -21,30 +27,31 @@
       <form action="php/add_provider.php" method="post" enctype="multipart/form-data">
 
         <div class="input-name">
-          <i class="fa fa-user lock"></i>
+          <i class="fa fa-user lock m"></i>
           <input  name="name" type="text" placeholder="الاسم كامل" id="name" class="name1">
         </div>
         <div class="input-name">
           <!-- <i class="fa fa-user lock mm"></i> -->
-          <i class="fa-solid fa-phone lock mm"></i>
+          <i class="fa-solid fa-phone lock mm m"></i>
           <input  name="phone" type="text" placeholder="رقم الهاتف" id="phone" class="name ">
           <span>
             <!-- //! يتم حذف  هذا الحقل ويحل مكانة حق اخيار الصورة -->
-            <input required name="picture" type="file" accept="image/*" placeholder="Choose an image" id="imageInput" class="name">
+            <i class="fa-solid fa-image lock ma"></i>
+            <input required name="picture" type="file" accept="image/*" placeholder="Choose an image" id="imageInput" class="pic">
 
           </span>
         </div>
         
         <div class="input-name">
-          <i class="fa fa-user lock "></i>
+          <i class="fa fa-user lock m"></i>
           <input required name="id_card" type="text" placeholder="رقم البطاقة الشخصية" id="" class="address">
         </div>
         <div class="input-name">
-          <i class="fa fa-user lock mm"></i>
+          <i class="fa fa-user lock mm m"></i>
           <input required name="city" type="text" placeholder="المدينة" id="city" class="name ">
 
           <span>
-            <i class="fa fa-user lock"></i>
+            <i class="fa fa-user lock m"></i>
             <input required name="street" type="text" placeholder="الشارع" id="street" class="name">
           </span>
         </div>
