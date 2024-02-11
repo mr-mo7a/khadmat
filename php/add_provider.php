@@ -1,9 +1,9 @@
 <?php
 // Include the connection file
-
-
 // include_once("connect.php");
 include("connect.php");
+
+
 
 // Retrieve new provider data from request (adjust method as needed)
 // address
@@ -13,10 +13,10 @@ $street = $_POST['street'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $idCard = $_POST['id_card'];
-$category = $_POST['category'];
 $service = $_POST['service'];
-// Generate a unique filename
+
 $picture = $_FILES['picture'];
+
 
 
 $errors = validateFormData();
@@ -39,7 +39,7 @@ $idAddress = setAddress();
 
 
 // Prepare the statement with placeholders for values
-$insertRequest = $con->prepare("INSERT INTO `proveder_requst`( `name`, `phone`, `address`, `id_card`, `date`, `categories`, `service` , picture) VALUES ( :name, :phone, :address, :id_card, :date, :categories, :service , :picture)");
+$insertRequest = $con->prepare("INSERT INTO `proveder_requst`( `name`, `phone`, `address`, `id_card`, `date`, `service` , picture) VALUES ( :`name`, :phone, :`address`, :`id_card`, :`date`, :`service` , :`picture`)");
 $date = date("Y-m-d H:i:s");
 // Bind the actual values to the placeholders
 $insertRequest->bindParam(":name", $name, PDO::PARAM_STR);
@@ -48,7 +48,6 @@ $insertRequest->bindParam(":picture", $pic, PDO::PARAM_STR);
 $insertRequest->bindParam(":address", $idAddress, PDO::PARAM_STR);
 $insertRequest->bindParam(":id_card", $idCard, PDO::PARAM_STR);
 $insertRequest->bindParam(":date", $date, PDO::PARAM_STR);  // Assuming date is stored as a string
-$insertRequest->bindParam(":categories", $category, PDO::PARAM_INT);
 $insertRequest->bindParam(":service", $service, PDO::PARAM_INT);
 
 // Execute the statement and check for errors
@@ -79,7 +78,7 @@ function handlingPic()
     $newFilename = uniqid() . '.' . pathinfo($picture['name'], PATHINFO_EXTENSION);
 
     // Move the file to the "pic" folder
-    $targetPath = "providers_pic/" . $newFilename;
+    $targetPath = "../providers_pic/" . $newFilename;
     if (!move_uploaded_file($picture['tmp_name'], $targetPath)) {
         // Handle file upload error
         echo "File upload failed";
@@ -123,15 +122,13 @@ function validateFormData() {
     if (empty($name)) {
         $errors[] = "Please enter your name.";
     }
-    if (!preg_match("/^[0-9+-]+$/", $phone)) { // Basic phone number validation
-        $errors[] = "Please enter a valid phone number.";
-    }
+    // if (!preg_match("/^[0-9+-]+$/", $phone)) { // Basic phone number validation
+    //     $errors[] = "Please enter a valid phone number.";
+    // }
     if (empty($idCard)) {
         $errors[] = "Please enter your ID card number.";
     }
-    if (empty($category)) {
-        $errors[] = "Please select a category.";
-    }
+
     if (empty($service)) {
         $errors[] = "Please select a service.";
     }
