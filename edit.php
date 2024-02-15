@@ -122,7 +122,84 @@
         </div>
 
       </form>
+      
     </div>
+    <section>
+        <div class="box">
+            <h3>خدماتنا</h3>
+            <div class="list">
+                <div class="imgbox">
+                    <img src="photo/73.JPG" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank"><small>#</small>1</h2>
+                    <h4>painter</h4>
+                    <p>mnmnmnmnm</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgbox">
+                <img src="photo/73.JPG" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank"><small>#</small>2</h2>
+                    <h4>painter</h4>
+                    <p>mnmnmnmnm</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgbox">
+                <img src="photo/73.JPG" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank"><small>#</small>3</h2>
+                    <h4>painter</h4>
+                    <p>mnmnmnmnm</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgbox">
+                <img src="photo/73.JPG" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank"><small>#</small>4</h2>
+                    <h4>painter</h4>
+                    <p>mnmnmnmnm</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgbox">
+                <img src="photo/73.JPG" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank"><small>#</small>5</h2>
+                    <h4>painter</h4>
+                    <p>mnmnmnmnm</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgbox">
+                <img src="photo/73.JPG" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank"><small>#</small>6</h2>
+                    <h4>painter</h4>
+                    <p>mnmnmnmnm</p>
+                </div>
+            </div>
+            <div class="list">
+                <div class="imgbox">
+                <img src="photo/73.JPG" alt="">
+                </div>
+                <div class="content">
+                    <h2 class="rank"><small>#</small>7</h2>
+                    <h4>painter</h4>
+                    <p>mnmnmnmnm</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
   </div>
 </body>
  <script src="func/function.js"></script>
