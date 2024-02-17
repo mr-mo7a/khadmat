@@ -1,7 +1,7 @@
 <?php
 // Include the connection file
 // include_once("connect.php");
-include("connect.php");
+include_once("connect.php");
 
 
 
@@ -39,7 +39,7 @@ $idAddress = setAddress();
 
 
 // Prepare the statement with placeholders for values
-$insertRequest = $con->prepare("INSERT INTO `proveder_requst`( `name`, `phone`, `address`, `id_card`, `date`, `service` , picture) VALUES ( :`name`, :phone, :`address`, :`id_card`, :`date`, :`service` , :`picture`)");
+$insertRequest = $con->prepare("INSERT INTO `proveder_requst`( `name`, `phone`, `address`, `id_card`, `date`, `service` , `picture`) VALUES ( :name, :phone, :address, :id_card, :date, :service , :picture)");
 $date = date("Y-m-d H:i:s");
 // Bind the actual values to the placeholders
 $insertRequest->bindParam(":name", $name, PDO::PARAM_STR);
@@ -78,14 +78,14 @@ function handlingPic()
     $newFilename = uniqid() . '.' . pathinfo($picture['name'], PATHINFO_EXTENSION);
 
     // Move the file to the "pic" folder
-    $targetPath = "../providers_pic/" . $newFilename;
+    $targetPath = "../../ser/images/" . $newFilename;
     if (!move_uploaded_file($picture['tmp_name'], $targetPath)) {
         // Handle file upload error
         echo "File upload failed";
         exit;
     }
     // Save the path to $pic
-    return $targetPath;
+    return $newFilename;
 }
 
 function setAddress()
@@ -106,7 +106,7 @@ function setAddress()
 
 
 function validateFormData() {
-    global $city, $street, $name, $phone, $idCard, $category, $service, $picture;
+    global $city, $street, $name, $idCard, $service, $picture;
 
     $errors = [];
 
@@ -122,9 +122,7 @@ function validateFormData() {
     if (empty($name)) {
         $errors[] = "Please enter your name.";
     }
-    // if (!preg_match("/^[0-9+-]+$/", $phone)) { // Basic phone number validation
-    //     $errors[] = "Please enter a valid phone number.";
-    // }
+
     if (empty($idCard)) {
         $errors[] = "Please enter your ID card number.";
     }
