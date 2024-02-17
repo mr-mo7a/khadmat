@@ -78,6 +78,7 @@ body{
     .form-container{
         position: relative;
         width: 400px;
+        left: 0;
     }
 
 }
@@ -355,11 +356,11 @@ section{
     }
    
 } */
-@media(max-width:999px){
+@media(max-width:999px)and (min-width:767px){
     section{
        position: absolute;
        top: 60%;
-       left: 20%;
+       left: 30%;
     }
     .container{
         width: 75%;
@@ -368,12 +369,12 @@ section{
     }
    
 }
-@media(max-width:768px){
+@media(max-width:768px) and (min-width:467px){
     section{
         position: absolute;
         top: 60%;
         align-items: center;
-        left: 30%;
+        left: 25%;
     }
     .container{
         width: 100%;
@@ -381,13 +382,14 @@ section{
         left: 0;
     }
 }
-@media(max-width:469px){
+@media(max-width:468px){
     section{
         position: absolute;
         top: 60%;
         align-items: center;
-        left: 20%;
+        left: 10%;
     }
+      
 }
 .box{
     position: relative;
@@ -401,7 +403,8 @@ section{
 }
 @media(max-width:768px){
     .box{
-        min-width: 300px;
+        min-width: 350px;
+        
     }
 }
 /* .box::before{
